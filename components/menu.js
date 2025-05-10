@@ -4,6 +4,7 @@ const inputTask = document.getElementById('input-task');
 const progressBar = document.getElementById('progress-fill');
 const progressText = document.getElementById('progress-text');
 const progressStats = document.getElementById('progress-stats');
+const backBtn = document.getElementById('back-btn');
 
 let percentage = 0;
 
@@ -11,6 +12,8 @@ const taskInTotal = {
     'pending': 0,
     'done':0,
 }
+
+backBtn.addEventListener('click', ()=> window.electronAPI.loadPage('index.html'))
 
 function eliminateTask(element) {
     let elementStyle = element.style.textDecoration === 'line-through';
