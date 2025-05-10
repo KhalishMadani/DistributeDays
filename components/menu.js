@@ -5,12 +5,6 @@ const progressBar = document.getElementById('progress-fill');
 const progressText = document.getElementById('progress-text');
 const progressStats = document.getElementById('progress-stats');
 
-
-const popupWindow = document.getElementById('overlay');
-const finishBtn = document.getElementById('finish-task-btn');
-const closeCustomAlert = document.getElementById('close-alert-btn');
-const submitTaskBtn = document.getElementById('submit-task-btn');
-
 const taskInTotal = {
     'pending': 0,
     'done':0,
@@ -91,11 +85,20 @@ addTask.onclick = () => {
     taskPercentage();
 }
 
+const popupWindow = document.getElementById('overlay');
+const finishBtn = document.getElementById('finish-task-btn');
+const closeCustomAlert = document.getElementById('close-alert-btn');
+const submitTaskBtn = document.getElementById('submit-task-btn');
+
+
 finishBtn.addEventListener('click', () => {
     popupWindow.style.display = 'flex';
 })
 
-
 closeCustomAlert.addEventListener('click', () => {
     popupWindow.style.display = 'none';
 });
+
+submitTaskBtn.addEventListener('click', () => {
+    window.electronAPI.loadPage("result_page.html")
+})
