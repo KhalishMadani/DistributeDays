@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
-    <title> Dare to be Productive</title>
+    <title>Be Productive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <button id="back-btn" class="back-btn">←</button>
-    <h1>Productive Day!</h1>
+    <h1>Write it down 👀</h1>
     <div class="container">
         <div class="main-menu">
             <button type="button" class="add-task-btn" id="add-task-btn">+</button>
-            <input type="text" id="input-task" placeholder="write your task here!!">
+            <input type="text" id="input-task" placeholder="write your duty here!!">
         </div>
         <div class="main-menu">
             <ul id="ul-element">
@@ -41,13 +41,21 @@
             <div class="days-container">
                 <span class="date-day">this</span>
                 <span class="date-year"></span>
-                <button id="finish-task" class="finish-task">
+                <button id="finish-task-btn" class="finish-task">
                     <span class="date-year">Finish</span>
                 </button>
             </div>
         </div>
-    </div>
 
+        <div class="overlay" id="overlay">
+            <div class="alert-box">
+                <p id="message">You Sure?</p>
+                <button type="button" id="submit-task-btn">Yes</button>
+                <button type="button" id="close-alert-btn">No</button>
+            </div>
+        </div>
+
+    </div>
     <script src="components/calendar.js"></script>
     <script src="components/menu.js"></script>
 </body>

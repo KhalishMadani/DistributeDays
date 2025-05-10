@@ -5,6 +5,12 @@ const progressBar = document.getElementById('progress-fill');
 const progressText = document.getElementById('progress-text');
 const progressStats = document.getElementById('progress-stats');
 
+
+const popupWindow = document.getElementById('overlay');
+const finishBtn = document.getElementById('finish-task-btn');
+const closeCustomAlert = document.getElementById('close-alert-btn');
+const submitTaskBtn = document.getElementById('submit-task-btn');
+
 const taskInTotal = {
     'pending': 0,
     'done':0,
@@ -31,7 +37,7 @@ function taskPercentage() {
     } else if (percentase >= 50 && percentase < 100) {
         progressText.textContent = 'Yuhuuu!';
     } else if (percentase === 100) {
-        progressText.textContent = 'Well Done!';
+        progressText.textContent = 'Horaay!';
     } else {
         progressText.textContent = '';
     }
@@ -84,3 +90,12 @@ addTask.onclick = () => {
     inputTask.value = ''
     taskPercentage();
 }
+
+finishBtn.addEventListener('click', () => {
+    popupWindow.style.display = 'flex';
+})
+
+
+closeCustomAlert.addEventListener('click', () => {
+    popupWindow.style.display = 'none';
+});
