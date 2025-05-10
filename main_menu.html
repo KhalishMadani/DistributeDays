@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
+    <title> Dare to be Productive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="back-btn" class="back-btn">←</button>
+    <h1>Productive Day!</h1>
+    <div class="container">
+        <div class="main-menu">
+            <button type="button" class="add-task-btn" id="add-task-btn">+</button>
+            <input type="text" id="input-task" placeholder="write your task here!!">
+        </div>
+        <div class="main-menu">
+            <ul id="ul-element">
+                <!-- dynamic element li element is here -->
+                 <!-- li sample 
+                  <li>
+                    <icon> <span>
+                  </li>
+                 -->
+            </ul>
+        </div>
+        <div class="main-menu progress-section">
+            <div class="progress-container">
+                <div class="progress-label">Productivity Level</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill" style="width: 0%;"></div>
+                    <div class="progress-text" id="progress-text"></div>
+                </div>
+                <div class="progress-stats" id="progress-stats">
+                    <span>Tasks Done: 0/0</span>
+                </div>
+            </div>
+            <button id="calendar-btn" class="calendar-date-btn">
+                <span class="">Finish</span>
+                <span class="">Your</span>
+                <span class="">Day</span>
+                <!-- <span class="date-month">APR</span>
+                <span class="date-year">2024</span> -->
+            </button>
+            <!-- <button id="calendar-btn" class="calendar-date-btn">
+                <span class="date-day">Finish Your Day</span>
+                <span class="date-month">APR</span>
+                <span class="date-year">2024</span>
+            </button> -->
+        </div>
+    </div>
+
+    <script src="components/calendar.js"></script>
+    <script src="components/menu.js"></script>
+</body>
+</html>
