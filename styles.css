@@ -169,142 +169,6 @@ input[type="text"]::placeholder {
     margin-bottom: 10px;
 }
 
-/* Calendar Styles */
-.calendar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #fff;
-    border: 3px solid #2d11ac;
-    border-radius: 4px;
-    box-shadow: 3px 3px 0 #e0a73d;
-}
-
-.calendar-header h2 {
-    margin: 0;
-    color: #2d11ac;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: 'Courier New', monospace;
-}
-
-.calendar-btn {
-    padding: 8px 15px;
-    font-size: 1.2rem;
-    background-color: #e0a73d;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 2px 2px 0 #2d11ac;
-}
-
-.calendar-btn:hover {
-    background-color: #2d11ac;
-    transform: translate(1px, 1px);
-    box-shadow: 1px 1px 0 #2d11ac;
-}
-
-.calendar-grid {
-    background-color: #fff;
-    border: 3px solid #2d11ac;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 20px;
-    box-shadow: 3px 3px 0 #e0a73d;
-}
-
-.calendar-weekdays {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    color: #2d11ac;
-    font-family: 'Courier New', monospace;
-}
-
-.calendar-weekdays div {
-    text-align: center;
-    padding: 5px;
-}
-
-.calendar-days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-}
-
-.calendar-day {
-    aspect-ratio: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    border: 2px solid #2d11ac;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-family: 'Courier New', monospace;
-}
-
-.calendar-day:hover {
-    background-color: #e0a73d;
-    color: white;
-    transform: translate(-1px, -1px);
-    box-shadow: 2px 2px 0 #2d11ac;
-}
-
-.calendar-day.empty {
-    background-color: #f0f0f0;
-    border: none;
-    cursor: default;
-}
-
-.calendar-day.today {
-    background-color: #2d11ac;
-    color: white;
-    font-weight: bold;
-}
-
-.calendar-events {
-    background-color: #fff;
-    border: 3px solid #2d11ac;
-    border-radius: 4px;
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 3px 3px 0 #e0a73d;
-}
-
-.calendar-events h3 {
-    color: #2d11ac;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    font-family: 'Courier New', monospace;
-}
-
-#calendar-tasks {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#calendar-tasks li {
-    padding: 8px;
-    margin-bottom: 5px;
-    background-color: #fff;
-    border: 2px solid #2d11ac;
-    border-radius: 4px;
-    font-family: 'Courier New', monospace;
-    box-shadow: 2px 2px 0 #e0a73d;
-}
-
 /* Progress Section Layout */
 .progress-section {
     display: flex;
@@ -393,30 +257,33 @@ input[type="text"]::placeholder {
 }
 
 /* Calendar Date Button */
-.calendar-date-btn {
+.days-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
     background-color: #0d3d40;
     border: 4px solid #1b6d73;
     border-radius: 8px;
-    padding: 15px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     min-width: 80px;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 0 10px #3cc4cd;
     margin-top: 0;
     height: fit-content;
-}
 
-.calendar-date-btn:hover {
+    .finish-task:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 15px #a3906c;
+    box-shadow: 0 0 15px #a36c6c;
+    background-color: #e0a73d;
+}
 }
 
 .date-day {
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #3cc4cd;
     font-family: 'Courier New', monospace;
@@ -424,7 +291,7 @@ input[type="text"]::placeholder {
     line-height: 1;
 }
 
-.date-month {
+.date-year {
     font-size: 1rem;
     color: #e6f7f8;
     font-family: 'Courier New', monospace;
@@ -432,13 +299,6 @@ input[type="text"]::placeholder {
     letter-spacing: 2px;
     margin: 5px 0;
     text-shadow: 0 0 3px #3cc4cd;
-}
-
-.date-year {
-    font-size: 0.9rem;
-    color: #3cc4cd;
-    font-family: 'Courier New', monospace;
-    text-shadow: 0 0 3px #0d3d40;
 }
 
 /* Back Button */

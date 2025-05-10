@@ -1,4 +1,4 @@
-const calendarBtn = document.getElementById('calendar-btn');
+// const calendarBtn = document.getElementById('calendar-btn');
 const backBtn = document.getElementById('back-btn');
 
 // Update date display
@@ -8,14 +8,13 @@ function updateDateDisplay() {
     const month = now.toLocaleString('default', { month: 'short' }).toUpperCase();
     const year = now.getFullYear();
     
-    document.querySelector('.date-day').textContent = day;
-    document.querySelector('.date-month').textContent = month;
+    document.querySelector('.date-day').textContent = `${day} ${month}`;
     document.querySelector('.date-year').textContent = year;
 }
 
-calendarBtn.addEventListener('click', () => {
-    window.electronAPI.loadPage("calendar.html");
-});
+// calendarBtn.addEventListener('click', () => {
+//     window.electronAPI.loadPage("calendar.html");
+// });
 
 backBtn.addEventListener('click', () => {
     window.electronAPI.loadPage("index.html");
