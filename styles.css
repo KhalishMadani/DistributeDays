@@ -6,13 +6,14 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #29a5ad;
+    background-color: #7acbad;
 }
 
 h1 {
     color: #e6f7f8;
     margin-bottom: 2rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 a {
@@ -95,7 +96,7 @@ input[type="text"]::placeholder {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: #3cc4cd;
+    background-color: #3ccdab;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 5px 5px 0 #0d3d40;

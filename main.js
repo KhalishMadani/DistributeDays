@@ -7,8 +7,8 @@ const { app,
 
 const createWindow = () => {
     const win = new BrowserWindow ({
-        width: 900,
-        height: 800,
+        width: 550,
+        height: 850,
         webPreferences: {
             nodeIntegration: false,
             contextIsolation: true,
@@ -23,7 +23,7 @@ const createWindow = () => {
         win.loadFile(page)
     })
 
-    win.webContents.openDevTools()
+    // win.webContents.openDevTools()
 }
 
 app.whenReady().then( () => {

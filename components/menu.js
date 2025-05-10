@@ -5,6 +5,8 @@ const progressBar = document.getElementById('progress-fill');
 const progressText = document.getElementById('progress-text');
 const progressStats = document.getElementById('progress-stats');
 
+let percentage = 0;
+
 const taskInTotal = {
     'pending': 0,
     'done':0,
@@ -24,20 +26,20 @@ function taskPercentage() {
     const inProgress = ul.childElementCount;
     taskInTotal['pending'] = inProgress;
     console.log(taskInTotal)
-    const percentase = (taskInTotal['done']/taskInTotal['pending'])*100
+    percentage = (taskInTotal['done']/taskInTotal['pending'])*100
     progressStats.textContent = `Tasks Done: ${taskInTotal['done']}/${taskInTotal['pending']}`;
-    if (percentase > 0 && percentase < 50) {
+    if (percentage > 0 && percentage < 50) {
         progressText.textContent = 'Keep Up!';
-    } else if (percentase >= 50 && percentase < 100) {
+    } else if (percentage >= 50 && percentage < 100) {
         progressText.textContent = 'Yuhuuu!';
-    } else if (percentase === 100) {
+    } else if (percentage === 100) {
         progressText.textContent = 'Horaay!';
     } else {
         progressText.textContent = '';
     }
 
-    console.log(percentase)
-    return progressBar.style.width = `${percentase}%`;
+    console.log(percentage)
+    return progressBar.style.width = `${percentage}%`;
 }
 
 addTask.onclick = () => {
@@ -100,5 +102,8 @@ closeCustomAlert.addEventListener('click', () => {
 });
 
 submitTaskBtn.addEventListener('click', () => {
-    window.electronAPI.loadPage("result_page.html")
+    if (percentage == 100) {
+        return window.electronAPI.loadPage("success_page.html");
+    }
+    return window.electronAPI.loadPage("failed_page.html");
 })
