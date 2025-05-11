@@ -19,4 +19,4 @@ Follow these steps to run the project locally:
 3. Install ElectronJS : ```npm install electron --save-dev```
 
 ## 🚀 Run the app
-``` npm run start ```
+to start the app run this command in your terminal ```npm run start```
