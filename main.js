@@ -16,7 +16,7 @@ const createWindow = () => {
             preload: path.join(__dirname, "preload.js")
         }
     })
-    // win.removeMenu()
+    win.removeMenu()
     win.loadFile('index.html')
 
     ipcMain.on("load-page", (event, page) => {

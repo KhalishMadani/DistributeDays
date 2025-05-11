@@ -1,3 +1,4 @@
+//main scripts
 const ul = document.getElementById('ul-element');
 const addTask = document.getElementById('add-task-btn');
 const inputTask = document.getElementById('input-task');
@@ -90,6 +91,7 @@ addTask.onclick = () => {
     taskPercentage();
 }
 
+
 // Update date display
 function updateDateDisplay() {
     const now = new Date();
@@ -102,6 +104,8 @@ function updateDateDisplay() {
 }
 updateDateDisplay()
 
+
+// popup box
 const popupWindow = document.getElementById('overlay');
 const finishBtn = document.getElementById('finish-task-btn');
 const closeCustomAlert = document.getElementById('close-alert-btn');
