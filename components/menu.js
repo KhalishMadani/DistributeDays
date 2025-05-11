@@ -90,6 +90,18 @@ addTask.onclick = () => {
     taskPercentage();
 }
 
+// Update date display
+function updateDateDisplay() {
+    const now = new Date();
+    const day = now.getDate().toString().padStart(2, '0');
+    const month = now.toLocaleString('default', { month: 'short' }).toUpperCase();
+    const year = now.getFullYear();
+    
+    document.querySelector('.date-day').textContent = `${day} ${month}`;
+    document.querySelector('.date-year').textContent = year;
+}
+updateDateDisplay()
+
 const popupWindow = document.getElementById('overlay');
 const finishBtn = document.getElementById('finish-task-btn');
 const closeCustomAlert = document.getElementById('close-alert-btn');
