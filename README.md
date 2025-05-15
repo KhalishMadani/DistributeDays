@@ -13,7 +13,7 @@ This project was created as a learning exercise to explore the basics of Electro
 
 ## 📦 Installation
 
-Follow these steps to run the project locally:
+Follow these steps to install the project locally:
 1. Clone the repository : ```https://github.com/KhalishMadani/DistributeDays.git```
 2. Install npm package : ```npm install```
 3. Install ElectronJS : ```npm install electron --save-dev```
